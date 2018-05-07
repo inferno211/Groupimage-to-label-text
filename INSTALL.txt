@@ -1,0 +1,21 @@
+=============[ POLISH ]=============
+
+Krok 1. UPLOAD
+Wyœlij pliki z foldera UPLOAD/ do g³ównego katalogu twojego forum MyBB.
+
+Krok 2. Style CSS
+W pliku CSS swojego motywu, np. global.css umieœæ kod CSS pluginu - domyœlne wartoœci znajduj¹ siê w pliku STYLES.txt w za³¹czonej paczce.
+
+Krok 3. Instalacja
+Zainstaluj plugin "Groupimage to label text" w panelu administracyjnym MyBB.
+
+=============[ ENGLISH ]=============
+
+Krok 1. UPLOAD
+Upload files from UPLOAD/ folder to main catalog of Your MyBB forum.
+
+Krok 2. CSS Styles
+In CSS file of your style, ex. global.css put code of plugin CSS - default value are in STYLES.txt files from RAR file.
+
+Krok 3. Installation
+Install plugin "Groupimage to label text" in Your administration panel of MyBB.

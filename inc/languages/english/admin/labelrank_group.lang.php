@@ -1,15 +1,6 @@
 <?php
-
-/*
-        Groupimage to label text [v1.2]
-      (c) Copyright 2013-2016 by Inferno
- 
-      @author    : Inferno (http://www.Inferno24.pl)
-      @contact   : inferno.piotr@gmail.com
-      @date      : 03-02-2016
-      @update    : 17-11-2017
-
-*/
+$l['show_other_group_title'] = "Show additional groups";
+$l['show_other_group_descr'] = "Show additional groups?";
 
 $l['agi_descr'] = "Change rank images to label text";
 $l['setting_description'] = "Settings of plugin \"Groupimage to label text\".";
@@ -25,4 +16,7 @@ $l['usercp_descr'] = "Turn on label texts in UCP?";
 
 $l['memberlist_title'] = "Turn on in memberlist";
 $l['memberlist_descr'] = "Turn on label texts in memberlist?";
+
+$l['read_pw_title'] = "Turn on in private message";
+$l['read_pw_descr'] = "Turn on label texts in private messages?";
 ?>

@@ -2,22 +2,34 @@
 
 EX.
 
-.gid-4 {
+.gid-[groupid] {
     background: red;
 }
 
 */
 
-.gid-[groupid] {
-    background: red;
+.gid-1, .gid-2, .gid-5 {
+    background: #808080;
+}
+
+.gid-3, .gid-6 {
+    background: #CC00CC;
+}
+
+.gid-4 {
+    background: green;
+}
+
+.gid-7 {
+    background: black;
 }
 
 .profile-rank {
-	display: inline-block;
+    display: inline-block;
 }
 
 .profile-rank span {
-	font-size: 11px;
+    font-size: 11px;
     font-weight: bold;
     padding: 2px 6px;
     margin: 5px 0;

@@ -7,7 +7,7 @@
       @author    : Inferno (http://www.github.com/inferno211)
       @contact   : piotr.grencel@mybboard.pl
       @date      : 03-02-2016
-      @update    : 08-05-2018
+      @update    : 10-05-2018
 
 */
 
@@ -20,7 +20,6 @@ $plugins->add_hook("member_profile_end", "rank_profile");
 $plugins->add_hook("usercp_end", "rank_usercp");
 $plugins->add_hook("memberlist_user", "rank_memberlist");
 $plugins->add_hook("postbit_pm", "rank_postbit");
-/*$plugins->add_hook("private_read_end", "rank_read_pw");*/
 
 function labelrank_info(){
     global $lang;
@@ -28,9 +27,9 @@ function labelrank_info(){
     return array(
         'name'          => 'Groupimage to label text',
         'description'   => $lang->agi_descr,
-        'website'       => 'http://www.inferno24.pl',
-        'author'        => 'Inferno',
-        'authorsite'    => 'http://www.Inferno24.pl',
+        'website'       => 'https://github.com/inferno211/Groupimage-to-label-text',
+        'author'        => 'Piotr \'Inferno\' Grencel',
+        'authorsite'    => 'https://github.com/inferno211',
         'version'       => '2.0.1',
         'guid'          => 'bab9eaae39210fd31d6c31c4fe4c9baf',
         'codename'      => 'groupimage_to_labeltext'
@@ -201,15 +200,6 @@ function rank_memberlist(){
         eval("\$group_label = '<div class=\"profile-rank\"><span class=\"gid-".$user['usergroup']."\">".$groupname."</span></div>';");
     }
 }
-
-/*function rank_read_pw(){
-    global $mybb, $pm, $usergroup;
-
-    if($mybb->settings['labelrank_read_pw']){
-        $groupname = getgroupname($pm['usergroup']);
-        eval("\$group_label = '<div class=\"profile-rank\"><span class=\"gid-".$pm['usergroup']."\">".$groupname."</span></div>';");
-    }
-}*/
 
 function getgroupname($groupid){
     global $cache;

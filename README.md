@@ -2,7 +2,7 @@
 
 # Groupimage to label text
 
-[![v2.0.1](https://img.shields.io/badge/release-v2.0.1-green.svg "v2.0.1")](https://github.com/inferno211/Groupimage-to-label-text/releases "v2.0.1") [![update](https://img.shields.io/badge/update-08.05.2018-red.svg "update")](https://github.com/inferno211/Groupimage-to-label-text/commits/master "update")
+[![v2.0.2](https://img.shields.io/badge/release-v2.0.2-green.svg "v2.0.2")](https://github.com/inferno211/Groupimage-to-label-text/releases "v2.0.2") [![update](https://img.shields.io/badge/update-26.08.2018-red.svg "update")](https://github.com/inferno211/Groupimage-to-label-text/commits/master "update")
 
 The plugin adds the ability to change rank images to labeltext. It also allows you to display additional ranks.
 

@@ -8,6 +8,6 @@ The plugin adds the ability to change rank images to labeltext. It also allows y
 
 ----
 # Demo
-![Ex.](https://mybboard.pl/xthreads_attach.php?file=2124_1525709793_0920f343/d333971c883fd0c26ea244ce5e74b648/other%20groups.png)
-![](https://mybboard.pl/xthreads_attach.php?file=1537_1454510370_3fd46247/db2a04048bd7ff936dd7fbbfcda8b762/profile.png)
-![](https://mybboard.pl/xthreads_attach.php?file=1536_1454510370_cbcd1525/0e0a68e3a425de421f5de7b1f9850f9d/posts.png)
+![Ex.](https://webboard.pl/xthreads_attach.php?file=2124_1525709793_0920f343/d333971c883fd0c26ea244ce5e74b648/other%20groups.png)
+![](https://webboard.pl/xthreads_attach.php?file=1537_1454510370_3fd46247/db2a04048bd7ff936dd7fbbfcda8b762/profile.png)
+![](https://webboard.pl/xthreads_attach.php?file=1536_1454510370_cbcd1525/0e0a68e3a425de421f5de7b1f9850f9d/posts.png)

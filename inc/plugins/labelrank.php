@@ -1,13 +1,13 @@
 <?php
 
 /*
-        Groupimage to label text [v2.0.2]
-      (c) Copyright 2013-2016 by Inferno
+        Groupimage to label text [v2.0.3]
+      (c) Copyright 2013-2020 by Inferno
  
       @author    : Inferno (http://www.github.com/inferno211)
       @contact   : piotr.grencel@mybboard.pl
       @date      : 03-02-2016
-      @update    : 26-08-2018
+      @update    : 27-06-2020
 
 */
 
@@ -30,14 +30,14 @@ function labelrank_info(){
         'website'       => 'https://github.com/inferno211/Groupimage-to-label-text',
         'author'        => 'Piotr \'Inferno\' Grencel',
         'authorsite'    => 'https://github.com/inferno211',
-        'version'       => '2.0.2',
+        'version'       => '2.0.3',
         'guid'          => 'bab9eaae39210fd31d6c31c4fe4c9baf',
         'codename'      => 'groupimage_to_labeltext'
     );
 }
 
 function labelrank_activate(){
-    global $db,$lang;
+    global $db, $lang;
     $lang->load("labelrank_group");
     $setting_group = array(
         "title"          => "Group Label",
@@ -137,14 +137,15 @@ function rank_postbit(&$post){
 
     if($mybb->settings['labelrank_postbit'] && $post['uid'] != 0){
         $groupname = getgroupname($post['usergroup']);
-        $post['groupimage'] = "<div class=\"profile-rank\"><span class=\"gid-".$post['usergroup']."\">".$groupname."</span></div>";
+        $post['groupimage'] = "<div class=\"profile-rank\"><span title=\"".$groupname."\" class=\"gid-".$post['usergroup']."\">".$groupname."</span></div>";
+        
         if($mybb->settings['labelrank_other'] && strlen($post['additionalgroups'])){
             $groups = explode(",", $post['additionalgroups']);
             $post['groupimage'] .= "<br /><strong>".$lang->labelrank_othergroups."</strong><br />";
             foreach($groups as $group)
             {
                 $groupname = getgroupname($group);
-                $post['groupimage'] .= "<div class=\"profile-rank\"><span class=\"gid-".$group."\">".$groupname."</span></div> ";
+                $post['groupimage'] .= "<div class=\"profile-rank-additional\"><span title=\"".$groupname."\" class=\"gid-".$group."\">".$groupname."</span></div> ";
             }
         }
     }
@@ -156,7 +157,7 @@ function rank_profile(){
 
     if($mybb->settings['labelrank_profile']){
         $groupname = getgroupname($memprofile['usergroup']);
-        $groupimage = "<div class=\"profile-rank\"><span class=\"gid-".$memprofile['usergroup']."\">".$groupname."</span></div>";
+        $groupimage = "<div class=\"profile-rank\"><span title=\"".$groupname."\" class=\"gid-".$memprofile['usergroup']."\">".$groupname."</span></div>";
 
         if($mybb->settings['labelrank_other'] && strlen($memprofile['additionalgroups'])){
             $groups = explode(",", $memprofile['additionalgroups']);
@@ -164,7 +165,7 @@ function rank_profile(){
             foreach($groups as $group)
             {
                 $groupname = getgroupname($group);
-                $groupimage .= "<div class=\"profile-rank\"><span class=\"gid-".$group."\">".$groupname."</span></div> ";
+                $groupimage .= "<div class=\"profile-rank-additional\"><span title=\"".$groupname."\" class=\"gid-".$group."\">".$groupname."</span></div> ";
             }
             $groupimage .= "<br />";
         }
@@ -178,15 +179,15 @@ function rank_usercp(){
 
     if($mybb->settings['labelrank_usercp']){
         $groupname = getgroupname($mybb->user['usergroup']);
-        $usergroup = "<div class=\"profile-rank\"><span class=\"gid-".$mybb->user['usergroup']."\">".$groupname."</span></div>";
+        $usergroup = "<div class=\"profile-rank\"><span title=\"".$groupname."\" class=\"gid-".$mybb->user['usergroup']."\">".$groupname."</span></div>";
 
         if($mybb->settings['labelrank_other'] && strlen($mybb->user['additionalgroups'])){
             $groups = explode(",", $mybb->user['additionalgroups']);
-            $usergroup .= "<br /><strong>".$lang->labelrank_othergroups."</strong> ";
+            $usergroup .= "<br /><strong>".$lang->labelrank_othergroups."</strong><br />";
             foreach($groups as $group)
             {
                 $groupname = getgroupname($group);
-                $usergroup .= "<div class=\"profile-rank\"><span class=\"gid-".$group."\">".$groupname."</span></div> ";
+                $usergroup .= "<div class=\"profile-rank-additional\"><span title=\"".$groupname."\" class=\"gid-".$group."\">".$groupname."</span></div> ";
             }
         }
     }
@@ -197,7 +198,7 @@ function rank_memberlist(){
 
     if($mybb->settings['labelrank_memberlist']){
         $groupname = getgroupname($user['usergroup']);
-        eval("\$group_label = '<div class=\"profile-rank\"><span class=\"gid-".$user['usergroup']."\">".$groupname."</span></div>';");
+        eval("\$group_label = '<div class=\"profile-rank\"><span title=\"".$groupname."\" class=\"gid-".$user['usergroup']."\">".$groupname."</span></div>';");
     }
 }
 
